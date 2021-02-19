@@ -328,7 +328,7 @@ class Curve:
 
         Args:
             firstIndex (int): Index of the first point in the buffer from which the optimization should start
-            lastIndex (int): Index of hte last point in the buffer up to which the optimization should go to
+            lastIndex (int): Index of the last point in the buffer up to which the optimization should go to
         """
         # Skip the computation if the start and end don't have enough points in between
         if lastIndex - firstIndex <= 1:

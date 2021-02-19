@@ -44,8 +44,8 @@ The final representation of the data based on the allowed *curve error*.
 ![alt text](images/step5.png "Final data")
 
 
-## Distance measurment methods
-In the previous example a distance is calculated between the point which is considered and the line drawn from the first to last point. There are different methods of calculating this distance, and they each have pros and cons. The two methods used in our library are _vertical_ and _perpepndicular_ distance. 
+## Distance measurement methods
+In the previous example a distance is calculated between the point which is considered and the line drawn from the first to last point. There are different methods of calculating this distance, and they each have pros and cons. The two methods used in our library are _vertical_ and _perpendicular_ distance. 
 
 ### Vertical distance
 Vertical distance is a straight line up or down from the point that is considered to the line between the points already saved. The advantage of calculating the distance in this way is that the units of the distance will be the same units as the data which is collected. Making the results are easier to interpret and it can be easy to know what error is introduced by using the curve logic, instead of keeping all the points.
@@ -53,7 +53,7 @@ Vertical distance is a straight line up or down from the point that is considere
 ![alt text](images/vertical_error.png "Example for vertical distance")
 
 ### Perpendicular distance
-Another way distance can be to calculate is as a line perpendicular from the point that is considered, to the points already saved. Perpendicular distance is typically used for data which has the same units on both dimentions, such as GPS coordinates. Perpendicular distance can also be used for data which has different units on each dimention, for example speed data. When measuring the distance in this way, the units of the error will be a combination of the units the data is collected in, as well as the time units. This gives the developer more flexibility over which points are considered important, taking into account the time aspect as well. The disadventage of using perpendicular error when units are different, is that more testing and tuning of parameters is required.
+Another way distance can be to calculate is as a line perpendicular from the point that is considered, to the points already saved. Perpendicular distance is typically used for data which has the same units on both dimensions, such as GPS coordinates. Perpendicular distance can also be used for data which has different units on each dimensions, for example speed data. When measuring the distance in this way, the units of the error will be a combination of the units the data is collected in, as well as the time units. This gives the developer more flexibility over which points are considered important, taking into account the time aspect as well. The disadvantage of using perpendicular error when units are different, is that more testing and tuning of parameters is required.
 
 ![alt text](images/perpendiular_gps.png "Example for perpendicular distance")
 
@@ -103,7 +103,7 @@ print (output_data)
 ```
 
 ## Speed data reduction
-A speed dataset was collected and passed through the curve logic algorithm using the vertical distance calculation. Special logic is implemneted around points value of 0, where those points are always saved. The green line indicates the original data, and the blue dots indicate the points which are kept after the algorithm reduced the dataset. The original dataset had 1116 points and was reduced to 148 points, a reduction of over 85%.
+A speed dataset was collected and passed through the curve logic algorithm using the vertical distance calculation. Special logic is implemented around points value of 0, where those points are always saved. The green line indicates the original data, and the blue dots indicate the points which are kept after the algorithm reduced the dataset. The original dataset had 1116 points and was reduced to 148 points, a reduction of over 85%.
 
 ![alt text](images/speed_reduction.png "Speed reduction")
 
@@ -116,7 +116,7 @@ The curve settings allow for 4 km/hr error in the reduction step. Below is a gra
 The GPS data was recorded for a trip and passed through the curve logic algorithm using the perpendicular distance calculation. The red line is the original dataset, and blue dots indicate the points which are kept after the algorithm ran. The original dataset had 625 points and it was reduced to 23 points, a reduction of over 95%.
 
 <!-- ![alt text](images/gps_reduction.png "Final data") -->
-![alt text](images/gps_map.png "GPS data overlayed on map")
+![alt text](images/gps_map.png "GPS data overlaid on map")
 
 
 ## License and patents
