@@ -57,7 +57,7 @@ Another way distance can be to calculate is as a line perpendicular from the poi
 
 ![alt text](images/perpendiular_gps.png "Example for perpendicular distance")
 
-## Library sample usage
+## Python Library
 Below is a sample of how the library is used, for a full example see [sample.py](sample.py).
 
 
@@ -100,6 +100,18 @@ Get the simplified points from the curve.
 output_data = curve.get_reduced_points()
 print (output_data) 
 #[[0, 1000], [1, 1000], [3, 6000]]
+```
+
+## Rust Library
+There are tests in both `src/lib.rs` and `tests/`. To run them, do:
+```
+cargo test
+```
+
+Examples on how to use the library are in `examples/`. To run them, do:
+```
+cargo run --example scalar
+cargo run --example position
 ```
 
 ## Speed data reduction
