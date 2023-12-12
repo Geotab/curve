@@ -15,7 +15,7 @@ use chrono::{prelude::*, Duration};
 use geotab_curve::*;
 
 #[derive(Clone, Debug, PartialEq)]
-pub struct SpeedSample {
+struct SpeedSample {
     time: DateTime<Utc>,
     value: f32,
 }
@@ -42,7 +42,7 @@ impl From<String> for SpeedSample {
 }
 
 #[derive(Clone, Debug, PartialEq)]
-pub struct GpsSample {
+struct GpsSample {
     time: DateTime<Utc>,
     latitude: f32,
     longitude: f32,

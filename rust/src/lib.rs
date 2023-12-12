@@ -51,6 +51,10 @@ where
         self.len() == 0
     }
 
+    fn is_full(&self) -> bool {
+        self.len() == self.capacity()
+    }
+
     fn values(&self) -> &[V];
     fn values_mut(&mut self) -> &mut [V];
     fn take_values(&mut self) -> Self::Buffer;
